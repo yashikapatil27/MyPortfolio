@@ -92,25 +92,28 @@
 					<h2>Professional Experience</h2>
 					<p>I have worked with diverse teams and technologies over the years, focusing on data science, machine learning, and AI research. Below are some highlights of my career:</p>
 								<div class="job-experience">
-									<div class="designation" tabindex="0">
+									<div class="designation" tabindex="0" onclick="toggleDescription(this)">
 										<span class="title">GRADUATE TEACHING ASSISTANT</span>
 										<span class="organization">COLLEGE OF ENGINEERING, UNIVERSITY OF MASSACHUSETTS DARTMOUTH</span>
+										<span class="dropdown-icon">▼</span>
 									</div>
 									<div class="description hidden">
 										<p>As a Graduate Teaching Assistant, I worked with over 70 students on data visualization projects, helping them learn and apply JavaScript (D3.js), HTML, and CSS. My role involved guiding students through their projects, troubleshooting issues, and brainstorming ideas to find the best datasets and visualizations for their concepts. I also conducted in-class activities, held one-on-one office hours, and supported group discussions to keep students engaged. Beyond mentoring, I assisted the professor with course content, graded assignments and projects, and provided feedback to help students improve their skills. This experience helped me refine my ability to break down technical concepts and communicate effectively with a variety of learners.</p>
 									</div>
 								
-									<div class="designation" tabindex="0">
+									<div class="designation" tabindex="0" onclick="toggleDescription(this)">
 										<span class="title">MACHINE VISION INTERN</span>
 										<span class="organization">NEW BEDFORD RESEARCH & ROBOTICS</span>
+										<span class="dropdown-icon">▼</span>
 									</div>
 									<div class="description hidden">
 										<p>As a Machine Vision Intern, I worked on integrating machine learning and computer vision into robotics, addressing tasks like object detection, pick-and-place operations, and real-time tracking using a Cognex camera and ABB GoFa robot. My work included developing predictive algorithms using RAPID programming and Python to enhance system performance and automate repetitive processes. I participated in brainstorming sessions and assisted in implementing vision-guided solutions, such as a system to detect parasites in fish fillets on conveyor belts for a marine start-up. Additionally, I presented technical findings to diverse audiences, ensuring clear communication and the successful delivery of scalable solutions.</p>
 									</div>
 								
-									<div class="designation" tabindex="0">
+									<div class="designation" tabindex="0" onclick="toggleDescription(this)">
 										<span class="title">DATA SCIENTIST</span>
 										<span class="organization">YOSHOPS</span>
+										<span class="dropdown-icon">▼</span>
 									</div>
 									<div class="description hidden">
 										<p>As a data scientist at Yoshops, I developed efficient data pipelines to integrate and process data from multiple sources, improving both speed and data quality. I designed and implemented machine learning models to enhance predictive accuracy, leveraging platforms like AWS and Python. Additionally, I created dynamic dashboards that transformed complex data into actionable insights, enabling data-driven decision-making across the organization. I streamlined the deployment of machine learning models by containerizing them with Docker, ensuring smooth integration into production environments. I also presented insights using data visualization tools like Tableau, helping stakeholders understand key trends and make informed business decisions.</p>
@@ -200,6 +203,29 @@
 			</div>
 			<script>
 				document.addEventListener('DOMContentLoaded', () => {
+				const designations = document.querySelectorAll('.designation');
+
+				designations.forEach(designation => {
+					designation.addEventListener('click', () => {
+					toggleDescription(designation);
+					});
+				});
+				});
+
+				function toggleDescription(element) {
+				const description = element.nextElementSibling;
+
+				if (description.classList.contains('hidden')) {
+					description.classList.remove('hidden');
+					element.classList.add('active');
+				} else {
+					description.classList.add('hidden');
+					element.classList.remove('active');
+				}
+				}
+
+
+				document.addEventListener('DOMContentLoaded', () => {
 					const designations = document.querySelectorAll('.designation');
 					const descriptions = document.querySelectorAll('.description');
 				
@@ -223,7 +249,7 @@
 			/* Styling for the Designations */
 			.designation {
 				cursor: pointer;
-				margin-bottom: 0.5em; /* Reduced margin */
+				margin-bottom: 0.5em; 
 				padding: 0.5em;
 				border-bottom: 2px solid #ddd;
 				transition: all 0.3s ease-in-out;
@@ -262,7 +288,6 @@
 				margin-top: 0.2em; 
 			}
 
-			/* Styling for Descriptions */
 			.description {
 				margin-left: 1em;
 				font-size: 1rem;
@@ -291,7 +316,6 @@
 				background-color: #0056b3;
 			}
 
-			/* Hidden Class */
 			.hidden {
 				display: none;
 			}
@@ -354,8 +378,6 @@
 				font-weight: 400; 
 			}
 			
-
-			/* Responsive Styling */
 			@media (max-width: 768px) {
 				.designation {
 					font-size: 1rem;
@@ -408,9 +430,9 @@
 			</footer>
 
 			<!-- Copyright -->
-			<div id="copyright">
+			<!-- <div id="copyright">
 				<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-			</div>
+			</div> -->
 
 		</div>
 
