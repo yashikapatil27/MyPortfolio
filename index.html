@@ -11,6 +11,55 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+		    /* Sticky "View Resume" button */
+		    #sticky-resume {
+		      position: fixed; /* Makes the button stick to the screen */
+		      top: 20px; /* Distance from the top */
+		      right: 20px; /* Distance from the right */
+		      z-index: 1000; /* Ensures it stays on top of other elements */
+		      padding: 10px 20px; /* Adds padding inside the button */
+		      border: 2px solid #007BFF; /* Blue boundary */
+		      border-radius: 5px; /* Rounded corners */
+		      background-color: white; /* White background */
+		      color: #007BFF; /* Blue text */
+		      text-decoration: none; /* Removes underline */
+		      font-weight: bold; /* Bold text */
+		      transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+		    }
+		
+		    /* Hover effect for the button */
+		    #sticky-resume:hover {
+		      background-color: #007BFF; /* Blue background on hover */
+		      color: white; /* White text on hover */
+		    }
+		
+		    /* Wrapper and other styles */
+		    #wrapper {
+		      padding: 20px;
+		    }
+		
+		    #intro {
+		      text-align: center;
+		    }
+		
+		    #intro img {
+		      width: 250px;
+		      height: 250px;
+		      border-radius: 50%;
+		      margin-bottom: 15px;
+		    }
+		
+		    .actions {
+		      list-style: none;
+		      padding: 0;
+		    }
+		
+		    .actions li {
+		      display: inline-block;
+		      margin: 10px;
+		    }
+		  </style>
 	</head>
 	<body class="is-preload">
 
@@ -23,9 +72,12 @@
 						<h1>Hi, I'm Yashika</h1>
 						<h2>Discover my work</h2>
 						<p>This portfolio contains my work across various domains such as machine learning, deep learning, computer vision, natural language processing, data visualization, optimization & statistical analysis, etc.</p>
-						<ul class="actions">
+<!-- 						<ul class="actions">
 							<li><a href="https://drive.google.com/file/d/1jrQRt_tNnQTxAsM-cHPDmix9V4NL2OSu/view?usp=sharing" class="logo">View Resume</a></li>
-						</ul>
+						</ul> -->
+						<a href="https://drive.google.com/file/d/1jrQRt_tNnQTxAsM-cHPDmix9V4NL2OSu/view?usp=sharing" class="resume-button" target="_blank" download="Resume-Yashika.pdf">
+        View Resume
+      </a>
 					</div>
 
 				<!-- Header -->
