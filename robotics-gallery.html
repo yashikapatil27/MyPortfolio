@@ -5,19 +5,53 @@
     <title>Robotics Internship Gallery</title>
     <link rel="stylesheet" href="assets/css/main.css">
     <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffcc00;
+            margin-bottom: 3rem;
+        }
+
         .gallery {
             display: flex;
             flex-wrap: wrap;
             gap: 2rem;
+            justify-content: center;
         }
+
         .gallery article {
-            flex: 1 1 30%;
+            flex: 1 1 300px;
+            background-color: #2b2b2b;
+            padding: 1rem;
+            border-radius: 10px;
             text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
+        .gallery article:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
         .gallery img {
             width: 100%;
             height: auto;
             border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .gallery p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #e0e0e0;
         }
     </style>
 </head>
@@ -26,15 +60,15 @@
     <section class="gallery">
         <article>
             <img src="images/Picture1.jpg" alt="End-effector holder for IRB6700" />
-            <p>End-effector holder designed for IRB6700 robot to improve manipulation efficiency.</p>
+            <p>I designed the end-effector for the IRB6700 robot using Rhino7 and fabricated it with a 3D printer. This component enhances the robot’s ability to handle objects with precision during R&D tasks.</p>
         </article>
         <article>
-            <img src="images/Picture2.png" alt="ABB GoFa used at Ribbon Cutting Ceremony" />
-            <p>ABB GoFa robot showcased during the ribbon-cutting ceremony event.</p>
+            <img src="images/Picture2.png" alt="ABB GoFa holding scissors for Ribbon Cutting" />
+            <p>The ABB GoFa robot is seen holding a pair of scissors with a customized gripper, specifically designed to grip objects securely. This setup was used during a ribbon-cutting ceremony event.</p>
         </article>
         <article>
-            <img src="images/Picture3.jpg" alt="ABB GoFa" />
-            <p>ABB GoFa robot deployed in various R&D tasks during internship projects.</p>
+            <img src="images/Picture3.jpg" alt="ABB GoFa picking up object" />
+            <p>Here, the ABB GoFa robot is shown picking up an object placed on a table. This demonstrates the robot’s capability for automated pick-and-place operations in various R&D scenarios.</p>
         </article>
     </section>
 </body>
