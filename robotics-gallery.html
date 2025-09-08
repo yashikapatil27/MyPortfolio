@@ -8,7 +8,7 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #1a1a1a;
-            color: #ffffff; /* Brighter white for readability */
+            color: #ffffff; /* bright text */
             margin: 0;
             padding: 2rem;
             font-size: 14px;
@@ -19,7 +19,7 @@
             color: #ffcc00;
             margin-bottom: 3rem;
             font-size: 2rem;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* subtle shadow for contrast */
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
         }
 
         .gallery {
@@ -49,21 +49,15 @@
             height: auto;
             border-radius: 8px;
             margin-bottom: 0.8rem;
-            transition: transform 0.3s ease;
-        }
-
-        .gallery img:hover {
-            transform: scale(1.05); /* subtle zoom effect on hover */
         }
 
         .gallery p {
             font-size: 0.85rem;
             line-height: 1.4;
-            color: #ffffff; /* bright white for readability */
+            color: #ffffff;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
         }
 
-        /* Responsive: make cards full width on small screens */
         @media (max-width: 600px) {
             .gallery article {
                 flex: 1 1 100%;
@@ -76,15 +70,15 @@
     <section class="gallery">
         <article>
             <img src="images/Picture1.jpg" alt="End-effector holder for IRB6700" />
-            <p>I designed the <strong>end-effector</strong> for the IRB6700 robot using <strong>Rhino7</strong> and fabricated it with a <strong>3D printer</strong>. This component enhances the robot’s ability to handle objects with precision during R&D tasks.</p>
+            <p>The <strong>end-effector</strong> for the IRB6700 robot was designed using <strong>Rhino7</strong> and fabricated with a <strong>3D printer</strong>. It enhances the robot’s ability to handle objects with precision during R&D tasks.</p>
         </article>
         <article>
             <img src="images/Picture2.png" alt="ABB GoFa holding scissors for Ribbon Cutting" />
-            <p>The <strong>ABB GoFa robot</strong> is seen holding a pair of <strong>scissors</strong> with a customized gripper, specifically designed to grip objects securely. This setup was used during a <strong>ribbon-cutting ceremony</strong> event.</p>
+            <p>The <strong>ABB GoFa robot</strong> is shown holding a pair of <strong>scissors</strong> with a customized gripper, specifically designed to grip objects securely. This setup was used during a <strong>ribbon-cutting ceremony</strong> event.</p>
         </article>
         <article>
             <img src="images/Picture3.jpg" alt="ABB GoFa picking up object" />
-            <p>Here, the <strong>ABB GoFa robot</strong> is shown picking up an object placed on a table. This demonstrates the robot’s capability for <strong>automated pick-and-place operations</strong> in various R&D scenarios.</p>
+            <p>The <strong>ABB GoFa robot</strong> is depicted picking up an object placed on a table. This demonstrates the robot’s capability for <strong>automated pick-and-place operations</strong> in R&D scenarios.</p>
         </article>
     </section>
 </body>
