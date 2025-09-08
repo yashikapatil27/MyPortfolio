@@ -5,73 +5,86 @@
     <title>Robotics Internship Gallery</title>
     <link rel="stylesheet" href="assets/css/main.css">
     <style>
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #1a1a1a;
-        color: #f0f0f0;
-        margin: 0;
-        padding: 2rem;
-        font-size: 14px; /* Reduced from default */
-    }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff; /* Brighter white for readability */
+            margin: 0;
+            padding: 2rem;
+            font-size: 14px;
+        }
 
-    h1 {
-        text-align: center;
-        color: #ffcc00;
-        margin-bottom: 2.5rem;
-        font-size: 2rem; /* Slightly smaller heading */
-    }
+        h1 {
+            text-align: center;
+            color: #ffcc00;
+            margin-bottom: 3rem;
+            font-size: 2rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* subtle shadow for contrast */
+        }
 
-    .gallery {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1.8rem;
-        justify-content: center;
-    }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
 
-    .gallery article {
-        flex: 1 1 300px;
-        background-color: #2b2b2b;
-        padding: 0.8rem; /* Slightly smaller padding */
-        border-radius: 10px;
-        text-align: center;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+        .gallery article {
+            flex: 1 1 300px;
+            background-color: #2b2b2b;
+            padding: 0.8rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-    .gallery article:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-    }
+        .gallery article:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
 
-    .gallery img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-        margin-bottom: 0.8rem;
-    }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 0.8rem;
+            transition: transform 0.3s ease;
+        }
 
-    .gallery p {
-        font-size: 0.85rem; /* Reduced from 0.95rem */
-        line-height: 1.4;
-        color: #e0e0e0;
-    }
-</style>
+        .gallery img:hover {
+            transform: scale(1.05); /* subtle zoom effect on hover */
+        }
 
+        .gallery p {
+            font-size: 0.85rem;
+            line-height: 1.4;
+            color: #ffffff; /* bright white for readability */
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+        }
+
+        /* Responsive: make cards full width on small screens */
+        @media (max-width: 600px) {
+            .gallery article {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <h1>Robotics & 3D Printing Internship Projects</h1>
     <section class="gallery">
         <article>
             <img src="images/Picture1.jpg" alt="End-effector holder for IRB6700" />
-            <p>I designed the end-effector for the IRB6700 robot using Rhino7 and fabricated it with a 3D printer. This component enhances the robot’s ability to handle objects with precision during R&D tasks.</p>
+            <p>I designed the <strong>end-effector</strong> for the IRB6700 robot using <strong>Rhino7</strong> and fabricated it with a <strong>3D printer</strong>. This component enhances the robot’s ability to handle objects with precision during R&D tasks.</p>
         </article>
         <article>
             <img src="images/Picture2.png" alt="ABB GoFa holding scissors for Ribbon Cutting" />
-            <p>The ABB GoFa robot is seen holding a pair of scissors with a customized gripper, specifically designed to grip objects securely. This setup was used during a ribbon-cutting ceremony event.</p>
+            <p>The <strong>ABB GoFa robot</strong> is seen holding a pair of <strong>scissors</strong> with a customized gripper, specifically designed to grip objects securely. This setup was used during a <strong>ribbon-cutting ceremony</strong> event.</p>
         </article>
         <article>
             <img src="images/Picture3.jpg" alt="ABB GoFa picking up object" />
-            <p>Here, the ABB GoFa robot is shown picking up an object placed on a table. This demonstrates the robot’s capability for automated pick-and-place operations in various R&D scenarios.</p>
+            <p>Here, the <strong>ABB GoFa robot</strong> is shown picking up an object placed on a table. This demonstrates the robot’s capability for <strong>automated pick-and-place operations</strong> in various R&D scenarios.</p>
         </article>
     </section>
 </body>
